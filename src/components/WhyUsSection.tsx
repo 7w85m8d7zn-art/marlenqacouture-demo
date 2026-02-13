@@ -32,7 +32,7 @@ export function WhyUsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-            Neden Marlenqa?
+            Neden Dijital Showroom?
           </h2>
           <p className="text-gray-600 text-lg">
             Binlerce gelin bize güvendi

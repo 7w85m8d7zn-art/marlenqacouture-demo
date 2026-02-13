@@ -15,7 +15,7 @@ export function AboutSection() {
         >
           <h2 className="text-5xl font-serif font-bold mb-6">Hakkımızda</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-            Marlenqa Couture, gelinlik tasarımında yüksek kalite ve özel tasarımın simgesidir.
+             Dijital Showroom, gelinlik tasarımında yüksek kalite ve özel tasarımın simgesidir.
           </p>
         </motion.div>
 
@@ -43,11 +43,11 @@ export function AboutSection() {
             className="space-y-6"
           >
             <p className="text-gray-600 leading-relaxed text-lg">
-              2010 yılında kurulan Marlenqa Couture, gelinlik kiralama ve özel tasarım hizmetlerinde İstanbul'un en saygın markalarından biridir.
+              2010 yılında kurulan Dijital Showroom, gelinlik kiralama ve özel tasarım hizmetlerinde İstanbul'un en saygın markalarından biridir.
             </p>
             
             <p className="text-gray-600 leading-relaxed text-lg">
-              Deneyimli tasarımcılarımız ve usta ustalarımız, her gelin için benzersiz ve kişiye özel çözümler sunmaktadır. Geleneksel el işçiliği ile modern tasarımın birleşimi, Marlenqa'nın imza stilini oluşturur.
+              Deneyimli tasarımcılarımız ve usta ustalarımız, her gelin için benzersiz ve kişiye özel çözümler sunmaktadır. Geleneksel el işçiliği ile modern tasarımın birleşimi, Dijital Showroom'un" imza stilini oluşturur.
             </p>
 
             <div className="space-y-4 pt-6">

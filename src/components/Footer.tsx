@@ -10,7 +10,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-serif font-bold mb-4">Marlenqa</h3>
+            <h3 className="text-2xl font-serif font-bold mb-4">Dijital Showroom</h3>
             <p className="text-gray-400">Premium bridal couture markası</p>
           </div>
 
@@ -38,17 +38,17 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">İletişim</h4>
             <p className="text-gray-400 text-sm mb-3">
-              Kocaeli, Darıca
+              İstanbul, Üsküdar
             </p>
             <a href="https://wa.me/905317745680" className="text-gray-400 hover:text-white transition-colors font-medium text-sm">
-              WhatsApp: 0531 774 56 80
+              WhatsApp: 0530 624 93 82
             </a>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8">
           <p className="text-center text-gray-400 text-sm">
-            © 2026 Marlenqa Couture. Tüm hakları saklıdır.
+            © 2026 Dijital Showroom. Tüm hakları saklıdır.
           </p>
         </div>
       </div>

@@ -41,7 +41,7 @@ export function Header() {
             className="text-2xl font-serif font-bold tracking-wide"
             onClick={() => setIsMenuOpen(false)}
           >
-            Marlen Qacouture
+            Dijital Showroom
 
           </Link>
 

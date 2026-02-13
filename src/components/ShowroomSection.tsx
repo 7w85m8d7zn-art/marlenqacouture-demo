@@ -41,7 +41,7 @@ export function ShowroomSection() {
                 <span className="text-2C3E50 text-2xl">📍</span>
                 <div>
                   <h4 className="font-semibold">Adres</h4>
-                  <p className="text-gray-600">Kocaeli, Darıca</p>
+                  <p className="text-gray-600">Beyoğlu, İstanbul</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -55,7 +55,7 @@ export function ShowroomSection() {
                 <span className="text-2C3E50 text-2xl">💬</span>
                 <div>
                   <h4 className="font-semibold">İletişim</h4>
-                  <p className="text-gray-600">WhatsApp: 0531 774 56 80</p>
+                  <p className="text-gray-600">WhatsApp: 0530 624 93 82</p>
                 </div>
               </div>
             </div>
