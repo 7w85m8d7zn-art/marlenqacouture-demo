@@ -74,7 +74,7 @@ export function Header() {
               whileTap={{ scale: 0.95 }}
               className="btn btn-primary text-sm hidden sm:inline-block"
             >
-              Randevu Al
+              Randevu Oluştur
             </motion.button>
 
             {/* Hamburger (mobile) */}
@@ -193,7 +193,7 @@ export function Header() {
                       whileTap={{ scale: 0.98 }}
                       className="btn btn-primary w-full py-3"
                     >
-                      Randevu Al
+                      Randevu Oluştur
                     </motion.button>
                   </div>
                 </div>
