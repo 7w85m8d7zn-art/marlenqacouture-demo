@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Marlenqa Couture - Gelinlik Kiralama & Özel Tasarım',
-  description: 'Premium bridal couture. Gelinlik kiralama ve özel tasarım hizmetleri.',
+  title: 'Dijital Showroom - Gelinlik Kiralama & Özel Tasarım',
+  description: 'Gelinlik mağazaları için demo showroom sitesi',
   icons: {
     icon: '/favicon.ico?v=1',
     shortcut: '/favicon.ico?v=1',
