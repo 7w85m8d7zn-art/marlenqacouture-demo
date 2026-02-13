@@ -1,7 +1,7 @@
 'use client'
 
-import { useState } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { motion, AnimatePresence, type PanInfo } from 'framer-motion'
 
 interface AppointmentModalProps {
   isOpen: boolean
@@ -20,6 +20,38 @@ export function AppointmentModal({ isOpen, onClose }: AppointmentModalProps) {
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [showThankYou, setShowThankYou] = useState(false)
 
+  useEffect(() => {
+    if (!isOpen) return
+
+    const prevBodyOverflow = document.body.style.overflow
+    const prevBodyOverflowX = document.body.style.overflowX
+    const prevHtmlOverflowX = document.documentElement.style.overflowX
+
+    // Lock background scroll and prevent horizontal overflow
+    document.body.style.overflow = 'hidden'
+    document.body.style.overflowX = 'hidden'
+    document.documentElement.style.overflowX = 'hidden'
+
+    // Close modal if user scrolls the page (mobile swipe / scroll gesture)
+    const handleScroll = () => {
+      onClose()
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('touchmove', handleScroll, { passive: true })
+
+    return () => {
+      document.body.style.overflow = prevBodyOverflow
+      document.body.style.overflowX = prevBodyOverflowX
+      document.documentElement.style.overflowX = prevHtmlOverflowX
+
+      window.removeEventListener('scroll', handleScroll)
+      window.removeEventListener('touchmove', handleScroll)
+    }
+  }, [isOpen, onClose])
+
+  const todayStr = new Date().toISOString().split('T')[0]
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
     setFormData(prev => ({
@@ -30,6 +62,11 @@ export function AppointmentModal({ isOpen, onClose }: AppointmentModalProps) {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+
+    if (formData.date && formData.date < todayStr) {
+      alert('Randevu tarihi geçmiş bir gün olamaz. Lütfen bugünden itibaren bir tarih seçin.')
+      return
+    }
 
     // Close the modal and show a lightweight thank-you overlay.
     setIsSubmitted(true)
@@ -84,38 +121,49 @@ export function AppointmentModal({ isOpen, onClose }: AppointmentModalProps) {
           />
 
           {/* Modal Container */}
-          <div className="fixed inset-0 z-50 flex items-center justify-center px-4 py-6">
+          <div className="fixed inset-0 z-50 flex justify-center items-start sm:items-center pt-24 sm:pt-0 px-0">
             {/* Modal */}
             <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.95 }}
+              initial={{ opacity: 0, y: 32, scale: 1 }}
+              animate={{ opacity: 1, y: 0, scale: 1 }}
+              exit={{ opacity: 0, y: 32, scale: 1 }}
               transition={{ duration: 0.3 }}
-              className="relative w-full max-w-2xl bg-white rounded-lg shadow-2xl"
-              style={{ maxHeight: 'calc(100vh - 3rem)', overflowY: 'auto' }}
+              drag="y"
+              dragConstraints={{ top: 0, bottom: 220 }}
+              dragElastic={0.15}
+              onDragEnd={(_, info: PanInfo) => { if (info.offset.y > 120) onClose() }}
+              whileDrag={{ scale: 0.99 }}
+              className="relative mx-auto w-[calc(100dvw-2rem)] sm:w-full max-w-lg bg-white rounded-3xl sm:rounded-2xl shadow-2xl"
+              style={{ maxHeight: 'calc(100vh - 7.5rem)', overflowY: 'auto' }}
             >
-              {/* Close Button */}
-              <button
-                onClick={onClose}
-                className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 transition-colors"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
+              {/* Sheet Handle + Close */}
+              <div className="sticky top-0 z-10 bg-white/95 backdrop-blur cursor-grab active:cursor-grabbing">
+                <div className="pt-3 pb-2">
+                  <div className="mx-auto h-1.5 w-12 rounded-full bg-gray-200" />
+                </div>
+                <button
+                  onClick={onClose}
+                  aria-label="Kapat"
+                  className="absolute top-3 right-4 text-gray-500 hover:text-gray-700 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
 
               {/* Content */}
-              <div className="p-10">
+              <div className="px-5 pb-6 pt-8 sm:p-6">
                 {!isSubmitted ? (
                   <>
-                    <h2 className="text-4xl font-serif font-bold mb-3">Randevu Al</h2>
-                    <p className="text-gray-600 mb-8 text-sm leading-relaxed">
+                    <h2 className="text-2xl sm:text-3xl font-serif font-bold mb-2">Randevu Al</h2>
+                    <p className="text-gray-600 mb-6 text-xs sm:text-sm leading-relaxed">
                       Lütfen bilgilerinizi girin. Hemen size dönüş yapacağız.
                     </p>
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
+                    <form onSubmit={handleSubmit} className="space-y-4">
                       <div>
-                        <label className="block text-sm font-semibold mb-2.5 text-gray-800">Ad Soyad</label>
+                        <label className="block text-xs font-semibold mb-2 text-gray-800">Ad Soyad</label>
                         <input
                           type="text"
                           name="name"
@@ -123,12 +171,12 @@ export function AppointmentModal({ isOpen, onClose }: AppointmentModalProps) {
                           onChange={handleChange}
                           required
                           placeholder="Adınız"
-                          className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
+                          className="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold mb-2.5 text-gray-800">Email</label>
+                        <label className="block text-xs font-semibold mb-2 text-gray-800">Email</label>
                         <input
                           type="email"
                           name="email"
@@ -136,12 +184,12 @@ export function AppointmentModal({ isOpen, onClose }: AppointmentModalProps) {
                           onChange={handleChange}
                           required
                           placeholder="ornek@email.com"
-                          className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
+                          className="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold mb-2.5 text-gray-800">Telefon</label>
+                        <label className="block text-xs font-semibold mb-2 text-gray-800">Telefon</label>
                         <input
                           type="tel"
                           name="phone"
@@ -149,39 +197,39 @@ export function AppointmentModal({ isOpen, onClose }: AppointmentModalProps) {
                           onChange={handleChange}
                           required
                           placeholder="0530 XXX XX XX"
-                          className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
+                          className="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold mb-2.5 text-gray-800">Tarih</label>
+                        <label className="block text-xs font-semibold mb-2 text-gray-800">Tarih</label>
                         <input
                           type="date"
                           name="date"
                           value={formData.date}
                           onChange={handleChange}
+                          min={todayStr}
                           required
-                          className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
+                          className="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold mb-2.5 text-gray-800">Saat</label>
+                        <label className="block text-xs font-semibold mb-2 text-gray-800">Saat</label>
                         <input
                           type="time"
                           name="time"
                           value={formData.time}
                           onChange={handleChange}
                           required
-                          className="w-full px-4 py-3 text-base border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
+                          className="w-full px-4 py-2.5 text-sm border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-rose"
                         />
                       </div>
 
                       <motion.button
                         type="submit"
-                        whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
-                        className="w-full bg-gray-900 text-white py-3.5 rounded-md font-semibold text-base hover:bg-gray-800 transition-colors mt-8"
+                        className="w-full bg-gray-900 text-white py-3 rounded-md font-semibold text-sm hover:bg-gray-800 transition-colors mt-6"
                       >
                         Randevu Talebini Gönder
                       </motion.button>
