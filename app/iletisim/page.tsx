@@ -70,7 +70,7 @@ export default function ContactPage() {
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-1">Adres</h4>
                         <p className="text-gray-600 text-sm">
-                          Beyoğlu, İstanbul<br />
+                          Darıca, Kocaeli<br />
                           Türkiye
                         </p>
                       </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
             <h2 className="text-3xl font-serif font-bold mb-8 text-center">Konumumuz</h2>
             <div className="relative h-96 bg-gray-200 rounded-lg overflow-hidden">
               <iframe
-                title="Marlenqa Couture - İstanbul Beyoğlu"
+                title="Marlenqa Couture - Kocaeli / Darıca "
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24169.001198434624!2d29.358888410931886!3d40.78126271464979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadfd1d75907cd%3A0x9a2f92dc99a38ee6!2zRGFyxLFjYSwgRXNraWhpc2FyLCBEYXLEsWNhL0tvY2FlbGk!5e0!3m2!1str!2str!4v1770856742274!5m2!1str!2str"
                 width="100%"
                 height="100%"
