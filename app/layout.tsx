@@ -4,7 +4,11 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Marlenqa Couture - Gelinlik Kiralama & Özel Tasarım',
   description: 'Premium bridal couture. Gelinlik kiralama ve özel tasarım hizmetleri.',
-  icons: '/favicon.ico',
+  icons: {
+    icon: '/favicon.ico?v=1',
+    shortcut: '/favicon.ico?v=1',
+    apple: '/favicon.ico?v=1',
+  },
 }
 
 export default function RootLayout({
