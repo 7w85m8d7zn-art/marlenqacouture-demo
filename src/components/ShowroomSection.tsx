@@ -41,7 +41,7 @@ export function ShowroomSection() {
                 <span className="text-2C3E50 text-2xl">📍</span>
                 <div>
                   <h4 className="font-semibold">Adres</h4>
-                  <p className="text-gray-600">Beyoğlu, İstanbul</p>
+                  <p className="text-gray-600">Kocaeli, Darıca</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
