@@ -114,8 +114,8 @@ export default function ContactPage() {
                       <span className="text-2xl">✉️</span>
                       <div>
                         <h4 className="font-semibold text-gray-900 mb-1">Email</h4>
-                        <a href="mailto:info@marlenqa.com" className="text-rose hover:text-rose/80 transition-colors font-medium">
-                          info@marlenqa.com
+                        <a href="mailto:info@test.com" className="text-rose hover:text-rose/80 transition-colors font-medium">
+                          info@test.com
                         </a>
                       </div>
                     </div>
