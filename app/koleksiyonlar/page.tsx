@@ -12,7 +12,7 @@ type SortOption = 'featured' | 'price-low' | 'price-high' | 'newest'
 
 export default function KoleksiyonPage() {
   const [search, setSearch] = useState('')
-  const [selectedCategory, setSelectedCategory] = useState<'all' | 'kiralama' | 'ozel-dikim'>('all')
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'kesim' | 'renklendirme' | 'bakim' | 'tasarim'>('all')
   const [selectedColor, setSelectedColor] = useState<string | null>(null)
   const [selectedSize, setSelectedSize] = useState<string | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('featured')
@@ -87,7 +87,7 @@ export default function KoleksiyonPage() {
         <label className="block text-sm font-semibold mb-3">Ara</label>
         <input
           type="text"
-          placeholder="Ürün adı..."
+          placeholder="Hizmet adı..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-rose"
@@ -98,7 +98,7 @@ export default function KoleksiyonPage() {
       <div>
         <label className="block text-sm font-semibold mb-3">Kategori</label>
         <div className="space-y-2">
-          {(['all', 'kiralama', 'ozel-dikim'] as const).map((cat) => (
+          {(['all', 'kesim', 'renklendirme', 'bakim', 'tasarim'] as const).map((cat) => (
             <label key={cat} className="flex items-center cursor-pointer">
               <input
                 type="radio"
@@ -108,7 +108,15 @@ export default function KoleksiyonPage() {
                 className="w-4 h-4 text-rose"
               />
               <span className="ml-3 text-sm">
-                {cat === 'all' ? 'Tümü' : cat === 'kiralama' ? 'Kiralama' : 'Özel Dikim'}
+                {cat === 'all'
+                  ? 'Tümü'
+                  : cat === 'kesim'
+                    ? 'Kesim & Şekillendirme'
+                    : cat === 'renklendirme'
+                      ? 'Renk & Balayage'
+                      : cat === 'bakim'
+                        ? 'Saç Bakımı'
+                        : 'Özel Saç Tasarımı'}
               </span>
             </label>
           ))}
@@ -173,9 +181,9 @@ export default function KoleksiyonPage() {
             transition={{ duration: 0.6 }}
             className="mb-12"
           >
-            <h1 className="text-3xl md:text-5xl font-serif font-bold mb-3 md:mb-4">Koleksiyon</h1>
+            <h1 className="text-3xl md:text-5xl font-serif font-bold mb-3 md:mb-4">Hizmetlerimiz</h1>
             <p className="text-gray-600 text-lg">
-              {filteredProducts.length} ürün bulundu
+              {filteredProducts.length} hizmet bulundu
             </p>
           </motion.div>
 
@@ -264,7 +272,13 @@ export default function KoleksiyonPage() {
                               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                             />
                             <div className="absolute top-4 right-4 bg-black/70 text-white px-4 py-2 rounded-full text-xs font-semibold">
-                              {product.category === 'kiralama' ? 'Kiralama' : 'Özel Dikim'}
+                              {product.category === 'kesim'
+                                ? 'Kesim & Şekillendirme'
+                                : product.category === 'renklendirme'
+                                  ? 'Renk & Balayage'
+                                  : product.category === 'bakim'
+                                    ? 'Saç Bakımı'
+                                    : 'Özel Saç Tasarımı'}
                             </div>
                           </div>
 
@@ -316,7 +330,7 @@ export default function KoleksiyonPage() {
                 </div>
               ) : (
                 <div className="text-center py-20">
-                  <p className="text-gray-600 text-lg">Arama kriterlerinize uygun ürün bulunamadı.</p>
+                  <p className="text-gray-600 text-lg">Arama kriterlerinize uygun hizmet bulunamadı.</p>
                   <button
                     onClick={() => {
                       setSearch('')

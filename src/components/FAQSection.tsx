@@ -12,33 +12,39 @@ interface FAQItem {
 const faqs: FAQItem[] = [
   {
     id: 1,
-    question: 'Kiralama süresi ne kadardır?',
-    answer: 'Standart kiralama süresi 3 gündür. Gelinlik almadan 1 gün öncesi, gelinlik günü ve sonrası olmak üzere. Daha uzun süre kiralamak istiyorsanız bize başvurabilirsiniz.'
+    question: 'Randevu almak zorunlu mu?',
+    answer:
+      'Yoğunluk durumuna göre değişir. En iyi deneyim için randevu öneririz. WhatsApp üzerinden hızlıca saat ayarlayabilir veya salonu arayabilirsiniz.'
   },
   {
     id: 2,
-    question: 'Özel tasarım gelinlik için ne kadar zaman gereklidir?',
-    answer: 'Özel tasarım gelinlikler için ortalama 4-6 hafta süre gerekmektedir. Siparişin aciliyet durumuna göre bu süre değişebilir. Randevu alıp tasarımcımızla konuşabilirsiniz.'
+    question: 'Saç boyama / balayage işlemi ne kadar sürer?',
+    answer:
+      'İşlemin süresi saçın uzunluğu, yoğunluğu ve istenen tekniğe göre değişir. Ortalama 2-4 saat arası sürer. Net süre için fotoğraf paylaşarak ücretsiz ön değerlendirme alabilirsiniz.'
   },
   {
     id: 3,
-    question: 'Ölçü alma işlemi ücretsiz mi?',
-    answer: 'Evet, ilk ölçü alma işlemi ve konsültasyon tamamen ücretsizdir. Sadece ürün seçimi veya özel tasarım hizmetini kullandığınızda ücret ödersiniz.'
+    question: 'Keratin bakımı ve saç botoksu farkı nedir?',
+    answer:
+      'Keratin bakımı saç telini güçlendirmeye ve kabarmayı azaltmaya odaklanır. Saç botoksu ise nem, parlaklık ve yumuşaklık kazandıran yoğun bir bakım protokolüdür. Saç tipinize göre en uygun seçeneği birlikte belirliyoruz.'
   },
   {
     id: 4,
-    question: 'Kiralanan gelinlik iade etmeden önce temizlik gerekli mi?',
-    answer: 'Hayır, kiralanan gelinliklerin temizliği bizim tarafımızdan yapılır. Gelinliği istediğiniz şekilde iade edebilirsiniz. Ancak ağır hasar durumunda hasar bedeli alınabilir.'
+    question: 'Fön ve şekillendirme için saçım temiz olmalı mı?',
+    answer:
+      'Tercihen temiz saç ile gelmeniz önerilir. İsterseniz salonda yıkama + fön paketi de alabilirsiniz. Saç tipinize uygun ürünlerle işlemi tamamlıyoruz.'
   },
   {
     id: 5,
-    question: 'Alterasyonlar (boy, uyum vb.) yapılabilir mi?',
-    answer: 'Evet, hem kiralama hem de satış gelinlikleri için alterasyon hizmeti sunmaktayız. Tasarımcımızla görüşerek uygun çözümleri belirleyebilirsiniz.'
+    question: 'Saç kesimi öncesi danışmanlık yapıyor musunuz?',
+    answer:
+      'Evet. Yüz şekliniz, saç yapınız ve kullanım alışkanlıklarınıza göre size en uygun kesimi öneriyoruz. İsterseniz referans fotoğraflarınızı getirerek birlikte karar verebiliriz.'
   },
   {
     id: 6,
     question: 'Ödeme seçenekleri nelerdir?',
-    answer: 'Kredi kartı, banka transferi ve nakit ödeme seçenekleri mevcut. Özel tasarım gelinlikler için %50 peşinat, %50 teslim sırasında ödeme yapılır.'
+    answer:
+      'Nakit, kredi/banka kartı ve banka transferi ile ödeme yapabilirsiniz. Paket hizmetlerde dönemsel kampanyalarımız olabiliyor; güncel fiyat ve kampanyalar için bize ulaşın.'
   }
 ]
 
@@ -57,7 +63,7 @@ export function FAQSection() {
         >
           <h2 className="text-5xl font-serif font-bold mb-6">Sık Sorulan Sorular</h2>
           <p className="text-gray-600 text-lg">
-            Marlenqa Couture hakkında merak edilen soruların cevaplarını bulabilirsiniz.
+            Kadın kuaför ve bakım hizmetlerimiz hakkında merak edilen soruların cevaplarını burada bulabilirsiniz.
           </p>
         </motion.div>
 

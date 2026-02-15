@@ -1,19 +1,16 @@
 'use client'
 
-import { useState } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { AppointmentModal } from './AppointmentModal'
 
 export function HeroSection() {
-  const [isModalOpen, setIsModalOpen] = useState(false)
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1519741497674-611481863552?w=2000')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=2000')`,
           filter: 'brightness(0.5)',
         }}
       />
@@ -26,7 +23,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="text-5xl md:text-7xl font-serif font-bold mb-6 tracking-wide"
         >
-          Özel Dikim & Gelinlik Kiralama Koleksiyonu
+          Kadın Kuaför & Güzellik Salonu
         </motion.h1>
 
         <motion.p
@@ -35,7 +32,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl mb-8 text-gray-200"
         >
-          Hayalinizdeki gelinliği bulun veya özel tasarım yaptırın
+          Saç kesimi, renklendirme, fön ve bakım hizmetlerinde modern dokunuşlar
         </motion.p>
 
         <motion.div
@@ -50,12 +47,10 @@ export function HeroSection() {
               whileTap={{ scale: 0.95 }}
               className="px-5 py-2.5 rounded-full text-center font-medium transition-all duration-300 cursor-pointer bg-white text-black hover:bg-rose hover:text-white w-full sm:w-auto font-semibold"
             >
-              Koleksiyonu Gez
+              Hizmetleri İncele
             </motion.button>
           </Link>
         </motion.div>
-
-        <AppointmentModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
       </div>
 
       {/* Scroll Indicator */}

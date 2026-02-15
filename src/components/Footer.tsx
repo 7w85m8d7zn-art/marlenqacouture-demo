@@ -11,17 +11,17 @@ export function Footer() {
           {/* Brand */}
           <div>
             <h3 className="text-2xl font-serif font-bold mb-4">Dijital Showroom</h3>
-            <p className="text-gray-400">Premium bridal couture markası</p>
+            <p className="text-gray-400">Kadın kuaför & güzellik salonu</p>
           </div>
 
           {/* Links */}
           <div>
-            <h4 className="font-semibold mb-4">Hizmetler</h4>
+            <h4 className="font-semibold mb-4">Hizmetlerimiz</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
-              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Gelinlik Kiralama</Link></li>
-              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Abiye Kiralama</Link></li>
-              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Nişanlık Kiralama</Link></li>
-              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Kınalık Kiralama</Link></li>
+              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Saç Kesimi & Şekillendirme</Link></li>
+              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Boya & Balayage</Link></li>
+              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Keratin & Saç Bakımı</Link></li>
+              <li><Link href="/koleksiyonlar" className="hover:text-white transition-colors">Topuz & Özel Saç Tasarımı</Link></li>
             </ul>
           </div>
 
@@ -30,7 +30,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Bilgi</h4>
             <ul className="space-y-2 text-gray-400 text-sm">
               <li><Link href="/hakkimizda" className="hover:text-white transition-colors">Hakkımızda</Link></li>
-              <li><Link href="/hakkimizda" className="hover:text-white transition-colors">SSS</Link></li>
+              <li><Link href="/hakkimizda" className="hover:text-white transition-colors">Sık Sorulan Sorular</Link></li>
             </ul>
           </div>
 
@@ -38,7 +38,7 @@ export function Footer() {
           <div>
             <h4 className="font-semibold mb-4">İletişim</h4>
             <p className="text-gray-400 text-sm mb-3">
-              İstanbul, Üsküdar
+              Kırşehir, Merkez
             </p>
             <a href="https://wa.me/905317745680" className="text-gray-400 hover:text-white transition-colors font-medium text-sm">
               WhatsApp: 0530 624 93 82

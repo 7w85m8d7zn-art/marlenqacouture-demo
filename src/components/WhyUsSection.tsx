@@ -4,19 +4,19 @@ import { motion } from 'framer-motion'
 
 const features = [
   {
-    icon: '✨',
-    title: 'Premium Kalite',
-    description: 'Yüksek kaliteli kumaş ve işçiliğe sahip seçkin gelinlikler'
+    icon: '💇‍♀️',
+    title: 'Uzman Ekip',
+    description: 'Deneyimli kuaför ekibimizle kesim, fön, renklendirme ve bakımda profesyonel sonuçlar'
   },
   {
-    icon: '👗',
-    title: 'Geniş Seçim',
-    description: 'Her tarzdan, her bedenden gelinlik modelleri'
+    icon: '🎨',
+    title: 'Renk & Balayage',
+    description: 'Doğal geçişler, modern tonlar ve saç tipinize uygun tekniklerle kişiye özel renk uygulamaları'
   },
   {
-    icon: '💍',
-    title: 'Kişiselleştirme',
-    description: 'Özel tasarım ve ölçü alımı hizmetleri'
+    icon: '🧴',
+    title: 'Saç Bakım Protokolleri',
+    description: 'Keratin, saç botoksu ve onarıcı bakımlarla sağlıklı, parlak ve güçlü saç görünümü'
   },
 ]
 
@@ -32,10 +32,10 @@ export function WhyUsSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-serif font-bold mb-4">
-            Neden Dijital Showroom?
+            Neden Salonumuz?
           </h2>
           <p className="text-gray-600 text-lg">
-            Binlerce gelin bize güvendi
+            Binlerce müşteri bize güvendi
           </p>
         </motion.div>
 

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Dijital Showroom - Gelinlik Kiralama & Özel Tasarım',
-  description: 'Gelinlik mağazaları için demo showroom sitesi',
+  title: 'Dijital Showroom - Kadın Kuaför & Güzellik Salonu',
+  description: 'Kadın kuaför ve güzellik salonu için modern web sitesi',
   icons: {
     icon: '/favicon.ico?v=1',
     shortcut: '/favicon.ico?v=1',

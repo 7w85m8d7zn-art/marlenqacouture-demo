@@ -11,7 +11,7 @@ export function StickyButtons() {
     <div className="fixed bottom-[calc(env(safe-area-inset-bottom)+10rem)] right-[calc(env(safe-area-inset-right)+1.25rem)] z-50 flex flex-col gap-3 md:hidden">
       {/* WhatsApp Button */}
       <motion.a
-        href={`https://wa.me/905317745680?text=${whatsappMessage}`}
+        href={`https://wa.me/905306249382?text=${whatsappMessage}`}
         target="_blank"
         rel="noopener noreferrer"
         whileHover={{ scale: 1.1 }}

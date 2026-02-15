@@ -2,7 +2,7 @@ export interface Product {
   id: string
   slug: string
   name: string
-  category: 'kiralama' | 'ozel-dikim'
+  category: 'kesim' | 'renklendirme' | 'bakim' | 'tasarim'
   priceFrom: number
   images: string[]
   colors: string[]
@@ -14,95 +14,77 @@ export interface Product {
 export const products: Product[] = [
   {
     id: '1',
-    slug: 'tul-prenses-gelinlik',
-    name: 'Tül Prenses Gelinlik',
-    category: 'kiralama',
-    priceFrom: 4500,
+    slug: 'profesyonel-sac-kesimi',
+    name: 'Profesyonel Saç Kesimi',
+    category: 'kesim',
+    priceFrom: 450,
     images: [
-      'https://images.unsplash.com/photo-1665783126947-8c98c7b7ac72?q=80&w=2050&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-      'https://images.unsplash.com/photo-1572364377536-459335b1bdb7?q=80&w=1287&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+      'https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1562322140-8baeececf3df?w=900&auto=format&fit=crop&q=60'
     ],
-    colors: ['Beyaz', 'Krem'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    tags: ['Kiralama', 'Klasik'],
-    description: 'Premium tül kumaştan yapılmış, zarif prenses kesim gelinlik. Mütevazı but detayları ile moderne sahip.',
+    colors: ['Doğal', 'Katlı', 'Modern'],
+    sizes: ['Standart'],
+    tags: ['Kesim', 'Stil'],
+    description: 'Yüz şeklinize uygun profesyonel saç kesimi ve stil danışmanlığı hizmeti.'
   },
   {
     id: '2',
-    slug: 'modern-minimal-gelinlik',
-    name: 'Modern Minimal Gelinlik',
-    category: 'ozel-dikim',
-    priceFrom: 8000,
+    slug: 'balayage-renklendirme',
+    name: 'Balayage & Saç Renklendirme',
+    category: 'renklendirme',
+    priceFrom: 1800,
     images: [
-      'https://images.unsplash.com/photo-1770757588092-6fd47f8a2985?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
-      'https://images.unsplash.com/photo-1759054713286-713c4ceeb5ba?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTR8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
+      'https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=900&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1595475038665-7d5a6b8f7f28?w=900&auto=format&fit=crop&q=60'
     ],
-    colors: ['Beyaz', 'Krem', 'Pudra'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'],
-    tags: ['Özel Dikim', 'Minimal'],
-    description: 'Çağdaş tasarımla minimal ve şık bir görünüm sunuyor. Sade detaylar ve kusursuz kesim.',
+    colors: ['Kumral', 'Platin', 'Karamel', 'Soğuk Ton'],
+    sizes: ['Kısa Saç', 'Orta Saç', 'Uzun Saç'],
+    tags: ['Boya', 'Balayage'],
+    description: 'Modern renk teknikleri ile doğal geçişli balayage ve profesyonel renklendirme hizmeti.'
   },
   {
     id: '3',
-    slug: 'dantel-gul-gelinlik',
-    name: 'Dantel Gül Gelinlik',
-    category: 'kiralama',
-    priceFrom: 5500,
+    slug: 'keratin-sac-bakimi',
+    name: 'Keratin Saç Bakımı',
+    category: 'bakim',
+    priceFrom: 1200,
     images: [
-      'https://images.unsplash.com/photo-1572364373428-d8b405100d0a?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
-      'https://images.unsplash.com/photo-1762687379484-81085b94c512?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
+      'https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=900&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1596464716127-f2a82984de30?w=900&auto=format&fit=crop&q=60'
     ],
-    colors: ['Beyaz', 'Krem'],
-    sizes: ['S', 'M', 'L', 'XL'],
-    tags: ['Kiralama', 'Romantik'],
-    description: 'Zarif dantel işlemesiyle bezeli, romantik ruhu yakalamış bir tasarım.',
+    colors: ['Tüm Saç Tipleri'],
+    sizes: ['Standart'],
+    tags: ['Bakım', 'Keratin'],
+    description: 'Saçı güçlendiren, parlaklık ve pürüzsüzlük sağlayan profesyonel keratin bakım uygulaması.'
   },
-  
+  {
+    id: '4',
+    slug: 'fon-ve-sekillendirme',
+    name: 'Fön & Şekillendirme',
+    category: 'kesim',
+    priceFrom: 300,
+    images: [
+      'https://images.unsplash.com/photo-1519699047748-de8e457a634e?w=900&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1599351431202-1e0f0137899a?w=900&auto=format&fit=crop&q=60'
+    ],
+    colors: ['Düz', 'Dalgalı', 'Hacimli'],
+    sizes: ['Kısa', 'Orta', 'Uzun'],
+    tags: ['Fön', 'Şekil'],
+    description: 'Özel günler veya günlük kullanım için profesyonel fön ve saç şekillendirme hizmeti.'
+  },
   {
     id: '5',
-    slug: 'bohem-stil-gelinlik',
-    name: 'Bohem Stil Gelinlik',
-    category: 'kiralama',
-    priceFrom: 4800,
+    slug: 'topuz-ve-ozel-sac-tasarimi',
+    name: 'Topuz & Özel Saç Tasarımı',
+    category: 'tasarim',
+    priceFrom: 950,
     images: [
-      'https://images.unsplash.com/photo-1767961054380-b53c469a8b2f?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
-      'https://images.unsplash.com/photo-1770757588092-6fd47f8a2985?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
+      'https://images.unsplash.com/photo-1523264766116-1e09b3145b84?w=900&auto=format&fit=crop&q=60',
+      'https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=900&auto=format&fit=crop&q=60'
     ],
-    colors: ['Krem', 'Fildişi'],
-    sizes: ['XS', 'S', 'M', 'L', 'XL'],
-    tags: ['Kiralama', 'Bohem'],
-    description: 'Kırsal ve serbestçi vibes ile bohem ruhunu sergileyen, kapalı tasarım.',
-  },
-  {
-    id: '6',
-    slug: 'ince-ipek-gelinlik',
-    name: 'İnce İpek Gelinlik',
-    category: 'ozel-dikim',
-    priceFrom: 9500,
-    images: [
-      'https://images.unsplash.com/photo-1759893362613-8bb8bb057af1?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
-      'https://images.unsplash.com/photo-1620147148825-589c4f1bb2a7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
-    ],
-    colors: ['Beyaz', 'Krem', 'Peach'],
-    sizes: ['XS', 'S', 'M', 'L'],
-    tags: ['Özel Dikim', 'Sofistike'],
-    description: 'Premium ipek kumaştan üretilmiş, sofistike ve rahat bir tasarım.',
-  },
-  
-
-  {
-    id: '9',
-    slug: 'v-yaka-gelinlik',
-    name: 'V-Yaka Gelinlik',
-    category: 'kiralama',
-    priceFrom: 5200,
-    images: [
-      'https://images.unsplash.com/photo-1620147148825-589c4f1bb2a7?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGJyaWRhbCUyMGdvd258ZW58MHx8MHx8fDI%3D',
-      'https://images.unsplash.com/photo-1594552072238-b8a33785b261?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8d2VkZGluZyUyMGdvd258ZW58MHx8MHx8fDI%3D',
-    ],
-    colors: ['Beyaz', 'Krem'],
-    sizes: ['S', 'M', 'L', 'XL'],
-    tags: ['Kiralama', 'V-Yaka'],
-    description: 'Derin V-yakalı, hafif ve rahat bir gelinlik modeli.',
-  },  
+    colors: ['Doğal', 'Romantik', 'Modern'],
+    sizes: ['Standart'],
+    tags: ['Topuz', 'Özel Gün'],
+    description: 'Düğün, nişan veya özel davetler için kişiye özel profesyonel saç tasarımı.'
+  }
 ]

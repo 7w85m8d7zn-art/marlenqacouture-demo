@@ -15,7 +15,7 @@ export function AboutSection() {
         >
           <h2 className="text-5xl font-serif font-bold mb-6">Hakkımızda</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto">
-             Dijital Showroom, gelinlik tasarımında yüksek kalite ve özel tasarımın simgesidir.
+             Dijital Showroom, kadın kuaför ve güzellik hizmetlerinde yüksek kalite ve modern stilin adresidir.
           </p>
         </motion.div>
 
@@ -27,9 +27,9 @@ export function AboutSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-           <img
-              src="/shoowroom.png"
-              alt="Showroom'umuzu Ziyaret Edin"
+            <img
+              src="/salon.png"
+              alt="Salonumuzu Ziyaret Edin"
               className="w-full h-96 object-cover rounded-lg shadow-lg"
             />
           </motion.div>
@@ -43,33 +43,33 @@ export function AboutSection() {
             className="space-y-6"
           >
             <p className="text-gray-600 leading-relaxed text-lg">
-              2010 yılında kurulan Dijital Showroom, gelinlik kiralama ve özel tasarım hizmetlerinde İstanbul'un en saygın markalarından biridir.
+              2010 yılında kurulan Dijital Showroom, kadın saç kesimi, renklendirme, fön ve bakım hizmetlerinde İstanbul'un en sevilen salonlarından biridir.
             </p>
             
             <p className="text-gray-600 leading-relaxed text-lg">
-              Deneyimli tasarımcılarımız ve usta ustalarımız, her gelin için benzersiz ve kişiye özel çözümler sunmaktadır. Geleneksel el işçiliği ile modern tasarımın birleşimi, Dijital Showroom'un" imza stilini oluşturur.
+              Deneyimli ekibimiz; saç kesimi, boya–balayage, keratin bakımı ve profesyonel saç tasarımıyla her müşteriye yüz hatlarına ve tarzına uygun, kişiye özel bir görünüm sunar. Kaliteli ürünler ve hijyen odaklı yaklaşımımız, Dijital Showroom'un imza stilini oluşturur.
             </p>
 
             <div className="space-y-4 pt-6">
               <div className="flex items-start gap-4">
-                <span className="text-2C3E50 text-2xl">✓</span>
+                <span className="text-[#2C3E50] text-2xl">✓</span>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Premium Koleksiyon</h4>
-                  <p className="text-gray-600">En iyi kumaş ve tasarımlarla oluşturulan koleksiyon</p>
+                  <h4 className="font-semibold text-lg mb-1">Profesyonel Saç Bakımı</h4>
+                  <p className="text-gray-600">Saçınıza uygun bakım protokolleri ve kaliteli ürünlerle sağlıklı görünüm</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-2C3E50 text-2xl">✓</span>
+                <span className="text-[#2C3E50] text-2xl">✓</span>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Özel Tasarım Hizmeti</h4>
-                  <p className="text-gray-600">Hayalinizdeki gelinliği tasarlayabiliriz</p>
+                  <h4 className="font-semibold text-lg mb-1">Renk & Balayage</h4>
+                  <p className="text-gray-600">Doğal geçişler, modern tonlar ve size özel renk danışmanlığı</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <span className="text-2C3E50 text-2xl">✓</span>
+                <span className="text-[#2C3E50] text-2xl">✓</span>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Profesyonel Danışmanlık</h4>
-                  <p className="text-gray-600">Deneyimli tasarımcılarımız size rehberlik edecek</p>
+                  <h4 className="font-semibold text-lg mb-1">Stil Danışmanlığı</h4>
+                  <p className="text-gray-600">Yüz şeklinize ve tarzınıza uygun kesim ve saç tasarımı önerileri</p>
                 </div>
               </div>
             </div>
