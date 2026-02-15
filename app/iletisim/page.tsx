@@ -25,7 +25,7 @@ export default function ContactPage() {
               className="text-center"
             >
               <h1 className="text-5xl md:text-6xl font-serif font-bold mb-6">
-                İletişim
+                Randevu Oluşturun & Bize Ulaşın
               </h1>
               <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
                 Sorularınız mı var? Randevu almak mı istiyorsunuz? Lütfen bizimle iletişime geçin. 
@@ -190,7 +190,7 @@ export default function ContactPage() {
             <div className="relative h-96 bg-gray-200 rounded-lg overflow-hidden">
               <iframe
                 title="Dijital Showroom - İstanbul / Üsküdar "
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24169.001198434624!2d29.358888410931886!3d40.78126271464979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cadfd1d75907cd%3A0x9a2f92dc99a38ee6!2zRGFyxLFjYSwgRXNraWhpc2FyLCBEYXLEsWNhL0tvY2FlbGk!5e0!3m2!1str!2str!4v1770856742274!5m2!1str!2str"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d48152.649453436!2d29.006590027035433!3d41.03530585816442!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cac826d524c9f1%3A0xc14f7612337b7f38!2zw5xza8O8ZGFuLCBFc2thbmRhciwgS8O8c2N1ZGFy!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

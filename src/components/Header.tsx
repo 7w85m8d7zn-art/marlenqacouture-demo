@@ -57,25 +57,12 @@ export function Header() {
               Hakkımızda
             </Link>
             <Link href="/iletisim" className="text-sm hover:text-rose transition-colors">
-              İletişim
+              Randevu Oluştur
             </Link>
           </nav>
 
           {/* Right actions (mobile + desktop) */}
           <div className="flex items-center gap-3">
-            {/* CTA (mobile icon + desktop button) */}
-            <motion.button
-              type="button"
-              onClick={() => {
-                setIsMenuOpen(false)
-                setIsModalOpen(true)
-              }}
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn btn-primary text-sm hidden sm:inline-block"
-            >
-              Randevu Oluştur
-            </motion.button>
 
             {/* Hamburger (mobile) */}
             <motion.button
@@ -183,19 +170,6 @@ export function Header() {
                     </Link>
                   </nav>
 
-                  <div className="mt-5">
-                    <motion.button
-                      type="button"
-                      onClick={() => {
-                        setIsMenuOpen(false)
-                        setIsModalOpen(true)
-                      }}
-                      whileTap={{ scale: 0.98 }}
-                      className="btn btn-primary w-full py-3"
-                    >
-                      Randevu Oluştur
-                    </motion.button>
-                  </div>
                 </div>
               </div>
               </motion.div>
